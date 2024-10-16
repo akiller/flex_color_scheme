@@ -5142,6 +5142,16 @@ class ThemeController with ChangeNotifier {
     _recentColors = colors;
   }
 
+  /// Export saved theme settings from local data
+  Map<String, dynamic> exportSavedThemeData() {
+    return _themeService.getAll();
+  }
+
+  /// Import saved theme settings to local data
+  Future<void> importSavedThemeData(Map<String, dynamic> data) {
+    return _themeService.putAll(data);
+  }
+
   // Helper ChangeNotifiers tucked into ThemeController.
   // The ChangeNotifiers below should be in its own controller.
   // Maybe that it is not is what started to cause issues on WEB builds?

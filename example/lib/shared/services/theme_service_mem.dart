@@ -35,4 +35,17 @@ class ThemeServiceMem implements ThemeService {
   /// The in memory version does nothing  just a no op.
   @override
   Future<void> save<T>(String key, T value) async {}
+
+  @override
+  Map<String, dynamic> getAll() {
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> putAll(
+    Map<String, dynamic> values, {
+    bool clearExisting = true,
+  }) {
+    throw UnimplementedError();
+  }
 }

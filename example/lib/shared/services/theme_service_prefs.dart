@@ -850,4 +850,17 @@ class ThemeServicePrefs implements ThemeService {
       debugPrint(' Save value ......... : $value');
     }
   }
+
+  @override
+  Map<String, dynamic> getAll() {
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<void> putAll(
+    Map<String, dynamic> values, {
+    bool clearExisting = true,
+  }) {
+    throw UnimplementedError();
+  }
 }
